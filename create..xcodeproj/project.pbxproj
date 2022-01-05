@@ -10,6 +10,7 @@
 		622B6A072763CE1B000622F8 /* PostPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622B6A062763CE1A000622F8 /* PostPreviewView.swift */; };
 		625D8C77276912D800181406 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625D8C76276912D800181406 /* EditProfileView.swift */; };
 		627264422785560E00569081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627264412785560E00569081 /* LaunchScreen.storyboard */; };
+		6272644927861F0E00569081 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6272644827861F0E00569081 /* PostModel.swift */; };
 		628E56D627627A0E00B7BDB4 /* create_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628E56D527627A0E00B7BDB4 /* create_App.swift */; };
 		628E56D827627A0E00B7BDB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628E56D727627A0E00B7BDB4 /* ContentView.swift */; };
 		628E56DA27627A0F00B7BDB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628E56D927627A0F00B7BDB4 /* Assets.xcassets */; };
@@ -20,6 +21,11 @@
 		628E56EA27627A7000B7BDB4 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628E56E927627A7000B7BDB4 /* LearnView.swift */; };
 		628E56EC27627A8600B7BDB4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628E56EB27627A8600B7BDB4 /* ProfileView.swift */; };
 		62981E8C2762806B00BF09E9 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62981E8B2762806B00BF09E9 /* AccountView.swift */; };
+		62B1CEC82786265500766010 /* SinglePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1CEC72786265500766010 /* SinglePostView.swift */; };
+		62B1CECA278632DC00766010 /* PostArrayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1CEC9278632DC00766010 /* PostArrayObject.swift */; };
+		62B1CECC2786376700766010 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1CECB2786376700766010 /* CommentsView.swift */; };
+		62B1CECE27863AF800766010 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1CECD27863AF800766010 /* MessageView.swift */; };
+		62B1CED027863C3300766010 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1CECF27863C3300766010 /* CommentModel.swift */; };
 		62BAEECE2762836900B01971 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62BAEECD2762836900B01971 /* GoogleService-Info.plist */; };
 		DF960E4BA51D712884BA78CE /* Pods_create_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E5B5F1504C24EC305B7001 /* Pods_create_.framework */; };
 /* End PBXBuildFile section */
@@ -30,6 +36,7 @@
 		625D8C76276912D800181406 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		625D8C7827691B3D00181406 /* create--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "create--Info.plist"; sourceTree = SOURCE_ROOT; };
 		627264412785560E00569081 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6272644827861F0E00569081 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		628E56D227627A0E00B7BDB4 /* create..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = create..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		628E56D527627A0E00B7BDB4 /* create_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = create_App.swift; sourceTree = "<group>"; };
 		628E56D727627A0E00B7BDB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +48,11 @@
 		628E56E927627A7000B7BDB4 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		628E56EB27627A8600B7BDB4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		62981E8B2762806B00BF09E9 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		62B1CEC72786265500766010 /* SinglePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePostView.swift; sourceTree = "<group>"; };
+		62B1CEC9278632DC00766010 /* PostArrayObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostArrayObject.swift; sourceTree = "<group>"; };
+		62B1CECB2786376700766010 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		62B1CECD27863AF800766010 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		62B1CECF27863C3300766010 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		62BAEECD2762836900B01971 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABE9CB9B0D70CA433A594C37 /* Pods-create..debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-create..debug.xcconfig"; path = "Target Support Files/Pods-create./Pods-create..debug.xcconfig"; sourceTree = "<group>"; };
 		E5BC3D5C27DBBDC2A9B45FBF /* Pods-create..release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-create..release.xcconfig"; path = "Target Support Files/Pods-create./Pods-create..release.xcconfig"; sourceTree = "<group>"; };
@@ -79,8 +91,19 @@
 				628E56E327627A3400B7BDB4 /* HomeView.swift */,
 				628E56D727627A0E00B7BDB4 /* ContentView.swift */,
 				627264412785560E00569081 /* LaunchScreen.storyboard */,
+				62B1CECB2786376700766010 /* CommentsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6272644727861F0000569081 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6272644827861F0E00569081 /* PostModel.swift */,
+				62B1CEC9278632DC00766010 /* PostArrayObject.swift */,
+				62B1CECF27863C3300766010 /* CommentModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		628E56C927627A0E00B7BDB4 = {
@@ -104,6 +127,8 @@
 		628E56D427627A0E00B7BDB4 /* create. */ = {
 			isa = PBXGroup;
 			children = (
+				62B1CEC62786257500766010 /* SubViews */,
+				6272644727861F0000569081 /* Models */,
 				627264432785FF5000569081 /* Views */,
 				625D8C7827691B3D00181406 /* create--Info.plist */,
 				628E56D527627A0E00B7BDB4 /* create_App.swift */,
@@ -120,6 +145,15 @@
 				628E56DC27627A0F00B7BDB4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		62B1CEC62786257500766010 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				62B1CEC72786265500766010 /* SinglePostView.swift */,
+				62B1CECD27863AF800766010 /* MessageView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		C679EBBFE7D83A81F2682ECC /* Pods */ = {
@@ -248,15 +282,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				625D8C77276912D800181406 /* EditProfileView.swift in Sources */,
+				62B1CED027863C3300766010 /* CommentModel.swift in Sources */,
 				628E56E627627A4C00B7BDB4 /* SearchView.swift in Sources */,
 				628E56EA27627A7000B7BDB4 /* LearnView.swift in Sources */,
 				628E56E427627A3400B7BDB4 /* HomeView.swift in Sources */,
 				622B6A072763CE1B000622F8 /* PostPreviewView.swift in Sources */,
 				628E56D827627A0E00B7BDB4 /* ContentView.swift in Sources */,
+				62B1CECC2786376700766010 /* CommentsView.swift in Sources */,
+				62B1CECA278632DC00766010 /* PostArrayObject.swift in Sources */,
+				62B1CEC82786265500766010 /* SinglePostView.swift in Sources */,
+				62B1CECE27863AF800766010 /* MessageView.swift in Sources */,
 				62981E8C2762806B00BF09E9 /* AccountView.swift in Sources */,
 				628E56E827627A5F00B7BDB4 /* PostView.swift in Sources */,
 				628E56EC27627A8600B7BDB4 /* ProfileView.swift in Sources */,
 				628E56D627627A0E00B7BDB4 /* create_App.swift in Sources */,
+				6272644927861F0E00569081 /* PostModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

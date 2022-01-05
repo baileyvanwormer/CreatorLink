@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @ObservedObject var posts: PostArrayObject
+    
     var body: some View {
         VStack (spacing: 10) {
             
             HStack {
-//                Spacer()
                 
                 Image("create.banner")
                     .renderingMode(.original)
@@ -25,52 +27,22 @@ struct HomeView: View {
                 Image(systemName: "ellipsis")
                     .padding()
                 
-//                Spacer()
-                
                 Image(systemName: "tray")
                     .padding()
                 
             
                 
             }
+            
             Divider()
             
-            ScrollView(.horizontal) {
-                HStack {
-                    VStack {
-        
-                    Image("walk")
-                        .renderingMode(.original)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        
-                    Text("Bright")
-                    
-                    }
-                    VStack {
-                        
-                        Image("sun")
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        
-                        Text("Sun")
-                    }
-                    
-                    VStack {
-                        
-                        Image("ashe")
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        
-                        Text("asheville")
-                        
+            ScrollView(.vertical) {
+                LazyVStack {
+                    ForEach(posts.dataArray, id: \.self) { post in
+                        SinglePostView(post: post)
                     }
                 }
             }
-            
-            Spacer()
         }
     }
 }
@@ -78,6 +50,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(posts: PostArrayObject())
     }
 }
