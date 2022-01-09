@@ -13,8 +13,6 @@ struct ContentView: View {
         TabView {
             NavigationView {
                 HomeView(posts: PostArrayObject(), title: "Feed")
-                    .navigationBarTitle("")
-                    .navigationBarHidden(true)
             }
                 .tabItem {
                     VStack {
@@ -48,8 +46,9 @@ struct ContentView: View {
                         Text("Learn")
                     }
                 }
-            
-            Text("Coming Soon")
+            NavigationView {
+                AccountView___New(isMyProfile: true, profileDisplayName: "My Profile", profileDisplayUsername: "username", profileUserID: "")
+            }
                 .tabItem {
                     VStack {
                         Image(systemName: "person")
