@@ -27,7 +27,7 @@ struct ImageGridView: View {
                 NavigationLink(
                     destination: HomeView(posts: PostArrayObject(post: post), title: "Post"),
                     label: {
-                        SinglePostView(post: post, showHeaderAndFooter: false)
+                        SinglePostView(post: post, showHeaderAndFooter: false, addHeartAnimationToView: false)
                 
                 })
             }

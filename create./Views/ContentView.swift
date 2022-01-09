@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var currentUserID: String? = nil
+    
     var body: some View {
         
         TabView {
@@ -46,8 +49,14 @@ struct ContentView: View {
                         Text("Learn")
                     }
                 }
-            NavigationView {
-                AccountView___New(isMyProfile: true, profileDisplayName: "My Profile", profileDisplayUsername: "username", profileUserID: "")
+            ZStack {
+                if currentUserID != nil {
+                    NavigationView {
+                        AccountView___New(isMyProfile: true, profileDisplayName: "My Profile", profileDisplayUsername: "username", profileUserID: "")
+                    }
+                } else {
+                    NewAccountView()
+                }
             }
                 .tabItem {
                     VStack {

@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		622B6A072763CE1B000622F8 /* PostPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622B6A062763CE1A000622F8 /* PostPreviewView.swift */; };
+		623C25C9278B3709004F3312 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623C25C8278B3709004F3312 /* SettingsView.swift */; };
+		623C25CB278B393E004F3312 /* SettingsLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623C25CA278B393D004F3312 /* SettingsLabelView.swift */; };
+		623C25CD278B3D74004F3312 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623C25CC278B3D74004F3312 /* SettingsRowView.swift */; };
+		623C25CF278B60E8004F3312 /* SettingsEditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623C25CE278B60E8004F3312 /* SettingsEditTextView.swift */; };
+		623C25D1278B666D004F3312 /* SettingsEditImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623C25D0278B666D004F3312 /* SettingsEditImageView.swift */; };
+		624F3690278B75F500CC7622 /* NewAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F368F278B75F500CC7622 /* NewAccountView.swift */; };
+		624F3692278B77CC00CC7622 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F3691278B77CC00CC7622 /* OnboardingView.swift */; };
+		624F3694278B7D3F00CC7622 /* SignInWithAppleButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F3693278B7D3F00CC7622 /* SignInWithAppleButtonCustom.swift */; };
+		624F3696278B812400CC7622 /* OnboardingViewP2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F3695278B812400CC7622 /* OnboardingViewP2.swift */; };
+		624F3698278B8A1800CC7622 /* LikeAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F3697278B8A1800CC7622 /* LikeAnimationView.swift */; };
 		625D8C77276912D800181406 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625D8C76276912D800181406 /* EditProfileView.swift */; };
 		627264422785560E00569081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627264412785560E00569081 /* LaunchScreen.storyboard */; };
 		6272644927861F0E00569081 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6272644827861F0E00569081 /* PostModel.swift */; };
@@ -40,6 +50,16 @@
 /* Begin PBXFileReference section */
 		41E5B5F1504C24EC305B7001 /* Pods_create_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_create_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		622B6A062763CE1A000622F8 /* PostPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPreviewView.swift; sourceTree = "<group>"; };
+		623C25C8278B3709004F3312 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		623C25CA278B393D004F3312 /* SettingsLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabelView.swift; sourceTree = "<group>"; };
+		623C25CC278B3D74004F3312 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		623C25CE278B60E8004F3312 /* SettingsEditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEditTextView.swift; sourceTree = "<group>"; };
+		623C25D0278B666D004F3312 /* SettingsEditImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEditImageView.swift; sourceTree = "<group>"; };
+		624F368F278B75F500CC7622 /* NewAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountView.swift; sourceTree = "<group>"; };
+		624F3691278B77CC00CC7622 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		624F3693278B7D3F00CC7622 /* SignInWithAppleButtonCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButtonCustom.swift; sourceTree = "<group>"; };
+		624F3695278B812400CC7622 /* OnboardingViewP2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewP2.swift; sourceTree = "<group>"; };
+		624F3697278B8A1800CC7622 /* LikeAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAnimationView.swift; sourceTree = "<group>"; };
 		625D8C76276912D800181406 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		625D8C7827691B3D00181406 /* create--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "create--Info.plist"; sourceTree = SOURCE_ROOT; };
 		627264412785560E00569081 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,6 +129,12 @@
 				62B1CECB2786376700766010 /* CommentsView.swift */,
 				62DC612E2786A64A002F5267 /* UploadView.swift */,
 				62A9F8C9278A42D2003B3F3A /* PostImageView.swift */,
+				623C25C8278B3709004F3312 /* SettingsView.swift */,
+				623C25CE278B60E8004F3312 /* SettingsEditTextView.swift */,
+				623C25D0278B666D004F3312 /* SettingsEditImageView.swift */,
+				624F368F278B75F500CC7622 /* NewAccountView.swift */,
+				624F3691278B77CC00CC7622 /* OnboardingView.swift */,
+				624F3695278B812400CC7622 /* OnboardingViewP2.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +199,10 @@
 				62B1CED32786584F00766010 /* ImageGridView.swift */,
 				62DC61302786A873002F5267 /* ImagePicker.swift */,
 				6280B166278A87F300EA1551 /* ProfileHeaderView.swift */,
+				623C25CA278B393D004F3312 /* SettingsLabelView.swift */,
+				623C25CC278B3D74004F3312 /* SettingsRowView.swift */,
+				624F3693278B7D3F00CC7622 /* SignInWithAppleButtonCustom.swift */,
+				624F3697278B8A1800CC7622 /* LikeAnimationView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -302,16 +332,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				623C25CF278B60E8004F3312 /* SettingsEditTextView.swift in Sources */,
 				625D8C77276912D800181406 /* EditProfileView.swift in Sources */,
+				624F3690278B75F500CC7622 /* NewAccountView.swift in Sources */,
+				624F3692278B77CC00CC7622 /* OnboardingView.swift in Sources */,
 				62B1CED027863C3300766010 /* CommentModel.swift in Sources */,
 				628E56E627627A4C00B7BDB4 /* SearchView.swift in Sources */,
 				628E56EA27627A7000B7BDB4 /* LearnView.swift in Sources */,
 				628E56E427627A3400B7BDB4 /* HomeView.swift in Sources */,
 				622B6A072763CE1B000622F8 /* PostPreviewView.swift in Sources */,
+				623C25D1278B666D004F3312 /* SettingsEditImageView.swift in Sources */,
 				628E56D827627A0E00B7BDB4 /* ContentView.swift in Sources */,
+				624F3694278B7D3F00CC7622 /* SignInWithAppleButtonCustom.swift in Sources */,
 				62B1CED2278651C200766010 /* CarouselView.swift in Sources */,
 				62B1CECC2786376700766010 /* CommentsView.swift in Sources */,
+				623C25C9278B3709004F3312 /* SettingsView.swift in Sources */,
+				623C25CD278B3D74004F3312 /* SettingsRowView.swift in Sources */,
 				62B1CECA278632DC00766010 /* PostArrayObject.swift in Sources */,
+				624F3696278B812400CC7622 /* OnboardingViewP2.swift in Sources */,
 				62B1CEC82786265500766010 /* SinglePostView.swift in Sources */,
 				62B1CECE27863AF800766010 /* MessageView.swift in Sources */,
 				62B1CED42786584F00766010 /* ImageGridView.swift in Sources */,
@@ -321,8 +359,10 @@
 				628E56E827627A5F00B7BDB4 /* PostView.swift in Sources */,
 				628E56EC27627A8600B7BDB4 /* ProfileView.swift in Sources */,
 				62A9F8CA278A42D2003B3F3A /* PostImageView.swift in Sources */,
+				624F3698278B8A1800CC7622 /* LikeAnimationView.swift in Sources */,
 				628E56D627627A0E00B7BDB4 /* create_App.swift in Sources */,
 				62DC61312786A873002F5267 /* ImagePicker.swift in Sources */,
+				623C25CB278B393E004F3312 /* SettingsLabelView.swift in Sources */,
 				62DC612F2786A64A002F5267 /* UploadView.swift in Sources */,
 				6272644927861F0E00569081 /* PostModel.swift in Sources */,
 			);

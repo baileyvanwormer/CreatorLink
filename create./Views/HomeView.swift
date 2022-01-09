@@ -40,7 +40,7 @@ struct HomeView: View {
             ScrollView(.vertical) {
                 LazyVStack {
                     ForEach(posts.dataArray, id: \.self) { post in
-                        SinglePostView(post: post, showHeaderAndFooter: true)
+                        SinglePostView(post: post, showHeaderAndFooter: true, addHeartAnimationToView: true)
                     }
                 }
                 .navigationBarTitle("")
