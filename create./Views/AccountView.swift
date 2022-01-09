@@ -46,7 +46,7 @@ struct AccountView: View {
             Divider()
             
             VStack {
-                Image("blue")
+                Image("blue1")
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)

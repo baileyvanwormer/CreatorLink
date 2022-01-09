@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject var posts: PostArrayObject
+    var title: String
     
     var body: some View {
         VStack (spacing: 10) {
@@ -39,9 +40,11 @@ struct HomeView: View {
             ScrollView(.vertical) {
                 LazyVStack {
                     ForEach(posts.dataArray, id: \.self) { post in
-                        SinglePostView(post: post)
+                        SinglePostView(post: post, showHeaderAndFooter: true)
                     }
                 }
+                .navigationBarTitle(title)
+                .navigationBarTitleDisplayMode(.inline)
             }
         }
     }
@@ -50,6 +53,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(posts: PostArrayObject())
+        HomeView(posts: PostArrayObject(), title: "Feed Test")
     }
 }

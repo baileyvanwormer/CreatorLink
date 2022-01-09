@@ -12,7 +12,7 @@ struct ContentView: View {
         
         TabView {
             NavigationView {
-                HomeView(posts: PostArrayObject())
+                HomeView(posts: PostArrayObject(), title: "Feed")
                     .navigationBarTitle("")
                     .navigationBarHidden(true)
             }
@@ -22,16 +22,18 @@ struct ContentView: View {
                         Text("Home")
                     }
                 }
-            
-            Text("Search")
+            NavigationView {
+                SearchView()
+            }
                 .tabItem {
                     VStack {
                         Image(systemName: "magnifyingglass")
                         Text("Search")
                     }
                 }
-            
-            Text("Post")
+            NavigationView {
+                UploadView()
+            }
                 .tabItem {
                     VStack {
                         Image(systemName: "plus.app")
@@ -39,7 +41,7 @@ struct ContentView: View {
                     }
                 }
             
-            Text("Learn")
+            Text("Coming Soon")
                 .tabItem {
                     VStack {
                         Image(systemName: "brain.head.profile" )
@@ -47,7 +49,7 @@ struct ContentView: View {
                     }
                 }
             
-            Text("Profile")
+            Text("Coming Soon")
                 .tabItem {
                     VStack {
                         Image(systemName: "person")
