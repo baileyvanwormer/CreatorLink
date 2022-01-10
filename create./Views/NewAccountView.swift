@@ -10,16 +10,18 @@ import SwiftUI
 struct NewAccountView: View {
     
     @State var showOnboarding: Bool = false
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         VStack(alignment: .center, spacing: 20, content: {
             
-            Image("create.logo")
+            Image(colorScheme == .light ? "create.logo" : "create.logo.dark")
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             
             Text("You're not signed in!")
-                .font(.largeTitle)
+                .font(.title)
                 .fontWeight(.bold)
                 .lineLimit(1)
                 .minimumScaleFactor(0.5)
@@ -35,7 +37,7 @@ struct NewAccountView: View {
             Button(action: {
                 showOnboarding.toggle()
             }, label: {
-                Text("Sign-In / SignUp".uppercased())
+                Text("Sign In".uppercased())
                     .font(.headline)
                     .fontWeight(.bold)
                     .padding()
@@ -62,5 +64,6 @@ struct NewAccountView: View {
 struct NewAccountView_Previews: PreviewProvider {
     static var previews: some View {
         NewAccountView()
+            
     }
 }

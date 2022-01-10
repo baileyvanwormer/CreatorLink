@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject var posts: PostArrayObject
+    @Environment(\.colorScheme) var colorScheme
+    
     var title: String
     
     var body: some View {
@@ -45,7 +47,7 @@ struct HomeView: View {
                 }
                 .navigationBarTitle("")
                 .navigationBarItems(leading:
-                Image("create.banner")
+                    Image(colorScheme == .light ? "create.banner.transparent" : "create.banner.dark.transparent")
                                         .renderingMode(.original)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
@@ -71,5 +73,7 @@ struct HomeView_Previews: PreviewProvider {
         NavigationView {
             HomeView(posts: PostArrayObject(), title: "Feed Test")
         }
+        
+        
     }
 }

@@ -21,16 +21,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="VVe-o8-EoX">
-                                <rect key="frame" x="132" y="373" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="kja-Q2-Hg2"/>
-                                    <constraint firstAttribute="height" constant="150" id="kmp-dp-dBM"/>
-                                </constraints>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchAuthor" translatesAutoresizingMaskIntoConstraints="NO" id="3Kr-OC-6UA">
                                 <rect key="frame" x="87" y="734" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="create.logo.dark" translatesAutoresizingMaskIntoConstraints="NO" id="plo-P9-XbG">
+                                <rect key="frame" x="20" y="337" width="374" height="223"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
@@ -39,8 +37,6 @@
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
                             <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="20" symbolic="YES" id="SfN-ll-jLj"/>
                             <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
-                            <constraint firstItem="VVe-o8-EoX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ikQ-3K-0A1"/>
-                            <constraint firstItem="VVe-o8-EoX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="t2n-BR-0Ei"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -51,6 +47,6 @@
     </scenes>
     <resources>
         <image name="LaunchAuthor" width="1600" height="218"/>
-        <image name="LaunchImage" width="180" height="180"/>
+        <image name="create.logo.dark" width="2000" height="2000"/>
     </resources>
 </document>

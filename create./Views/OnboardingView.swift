@@ -11,11 +11,13 @@ struct OnboardingView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @State var showOnboardingP2: Bool = false
+    @Environment(\.colorScheme) var colorScheme
+    
     
     var body: some View {
         VStack(alignment: .center, spacing: 20, content: {
             
-            Image("create.logo")
+            Image(colorScheme == .light ? "create.logo" : "create.logo.dark")
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -27,8 +29,9 @@ struct OnboardingView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.all)
             
+            // MARK: Sign in with Apple
             Button(action: {
-                showOnboardingP2.toggle()
+                SignInWithApple.instance.startSignInWithAppleFlow()
             }, label: {
                 SignInWithAppleButtonCustom()
                     .frame(height: 60)
@@ -36,6 +39,7 @@ struct OnboardingView: View {
             })
                 .padding(.horizontal, 50)
             
+            // MARK: Sign in with Google
             Button(action: {
                 showOnboardingP2.toggle()
             }, label: {
@@ -48,7 +52,7 @@ struct OnboardingView: View {
                 }
                 .frame(height: 60)
                 .frame(maxWidth: .infinity)
-                .background(Color.init(.sRGB, red: 222/255, green: 82/255, blue: 70/255, opacity: 1.0))
+                .background(Color.red)
                 .cornerRadius(6)
                 .font(.system(size: 23, weight: .medium, design: .default))
                 .padding(.horizontal, 50)

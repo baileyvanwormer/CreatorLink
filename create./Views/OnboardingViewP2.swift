@@ -11,6 +11,8 @@ struct OnboardingViewP2: View {
     
     @State var displayName: String = ""
     @State var showImagePicker: Bool = false
+    @Environment(\.colorScheme) var colorScheme
+    
     
     // MARK: For Image Picker
     @State var imageSelected: UIImage = UIImage(named: "blue1")!

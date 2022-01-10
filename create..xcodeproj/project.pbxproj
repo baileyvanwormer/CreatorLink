@@ -33,6 +33,7 @@
 		628E56EA27627A7000B7BDB4 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628E56E927627A7000B7BDB4 /* LearnView.swift */; };
 		628E56EC27627A8600B7BDB4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628E56EB27627A8600B7BDB4 /* ProfileView.swift */; };
 		62981E8C2762806B00BF09E9 /* AccountView - old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62981E8B2762806B00BF09E9 /* AccountView - old.swift */; };
+		62A02683278BE78E009DA487 /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A02682278BE78E009DA487 /* SignInWithApple.swift */; };
 		62A9F8CA278A42D2003B3F3A /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A9F8C9278A42D2003B3F3A /* PostImageView.swift */; };
 		62B1CEC82786265500766010 /* SinglePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1CEC72786265500766010 /* SinglePostView.swift */; };
 		62B1CECA278632DC00766010 /* PostArrayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1CEC9278632DC00766010 /* PostArrayObject.swift */; };
@@ -77,6 +78,8 @@
 		628E56E927627A7000B7BDB4 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
 		628E56EB27627A8600B7BDB4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		62981E8B2762806B00BF09E9 /* AccountView - old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountView - old.swift"; sourceTree = "<group>"; };
+		62A0267F278BE711009DA487 /* create..entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = create..entitlements; sourceTree = "<group>"; };
+		62A02682278BE78E009DA487 /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
 		62A9F8C9278A42D2003B3F3A /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 		62B1CEC72786265500766010 /* SinglePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePostView.swift; sourceTree = "<group>"; };
 		62B1CEC9278632DC00766010 /* PostArrayObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostArrayObject.swift; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 		628E56D427627A0E00B7BDB4 /* create. */ = {
 			isa = PBXGroup;
 			children = (
+				62A02680278BE76C009DA487 /* Services */,
+				62A0267F278BE711009DA487 /* create..entitlements */,
 				62B1CEC62786257500766010 /* SubViews */,
 				6272644727861F0000569081 /* Models */,
 				627264432785FF5000569081 /* Views */,
@@ -188,6 +193,22 @@
 				628E56DC27627A0F00B7BDB4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		62A02680278BE76C009DA487 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				62A02681278BE774009DA487 /* SignInProviders */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		62A02681278BE774009DA487 /* SignInProviders */ = {
+			isa = PBXGroup;
+			children = (
+				62A02682278BE78E009DA487 /* SignInWithApple.swift */,
+			);
+			path = SignInProviders;
 			sourceTree = "<group>";
 		};
 		62B1CEC62786257500766010 /* SubViews */ = {
@@ -340,6 +361,7 @@
 				628E56E627627A4C00B7BDB4 /* SearchView.swift in Sources */,
 				628E56EA27627A7000B7BDB4 /* LearnView.swift in Sources */,
 				628E56E427627A3400B7BDB4 /* HomeView.swift in Sources */,
+				62A02683278BE78E009DA487 /* SignInWithApple.swift in Sources */,
 				622B6A072763CE1B000622F8 /* PostPreviewView.swift in Sources */,
 				623C25D1278B666D004F3312 /* SettingsEditImageView.swift in Sources */,
 				628E56D827627A0E00B7BDB4 /* ContentView.swift in Sources */,
@@ -493,6 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = create./create..entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"create./Preview Content\"";
@@ -500,6 +523,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "create--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "creator link";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera at the user's request to take a photo.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This allows the app to access the photo library to import or save a photo at the user's request.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -524,6 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = create./create..entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"create./Preview Content\"";
@@ -531,6 +558,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "create--Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "creator link";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera at the user's request to take a photo.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This allows the app to access the photo library to import or save a photo at the user's request.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

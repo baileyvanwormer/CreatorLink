@@ -15,7 +15,7 @@ struct SinglePostView: View {
     @State var addHeartAnimationToView: Bool
     @State var showActionSheet: Bool = false
     @State var actionSheetType: PostActionSheetOption = .general
-    @State var postImage: UIImage = UIImage(named: "blue1")!
+    @State var postImage: UIImage = UIImage(named: "jyler")!
     enum PostActionSheetOption {
         case general
         case reporting
@@ -106,7 +106,8 @@ struct SinglePostView: View {
                     
                     Spacer()
                 })
-                .padding(.all)
+                .padding(.horizontal)
+                .padding(.top)
                 
                 if let caption = post.caption {
                 HStack {
