@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct OnboardingView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @State var showOnboardingP2: Bool = false
     @Environment(\.colorScheme) var colorScheme
+    @State var showError: Bool = false
+    
+    @State var displayName: String = ""
+    @State var email: String = ""
+    @State var providerID: String = ""
+    @State var provider: String = ""
     
     
     var body: some View {
@@ -25,13 +32,13 @@ struct OnboardingView: View {
             Text("Account Sign-Up")
                 .bold()
                 .font(.title)
-                .multilineTextAlignment(.leading)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.all)
             
             // MARK: Sign in with Apple
             Button(action: {
-                SignInWithApple.instance.startSignInWithAppleFlow()
+                SignInWithApple.instance.startSignInWithAppleFlow(view: self)
             }, label: {
                 SignInWithAppleButtonCustom()
                     .frame(height: 60)
@@ -39,48 +46,79 @@ struct OnboardingView: View {
             })
                 .padding(.horizontal, 50)
             
-            // MARK: Sign in with Google
-            Button(action: {
-                showOnboardingP2.toggle()
-            }, label: {
-                HStack {
-                    
-                    Image(systemName: "globe")
-                    
-                    Text("Sign In with Google")
-                    
-                }
-                .frame(height: 60)
-                .frame(maxWidth: .infinity)
-                .background(Color.red)
-                .cornerRadius(6)
-                .font(.system(size: 23, weight: .medium, design: .default))
-                .padding(.horizontal, 50)
-                
-            })
-                .accentColor(Color.white)
-            
+//            // MARK: Sign in with Google
+//            Button(action: {
+//                showOnboardingP2.toggle()
+//            }, label: {
+//                HStack {
+//                    
+//                    Image("google.light")
+//                    
+//                    Text("Sign in with Google")
+//                    
+//                }
+//                .frame(height: 60)
+//                .frame(maxWidth: .infinity)
+//                .background(Color.white)
+//                .cornerRadius(6)
+//                .font(.system(size: 23, weight: .medium, design: .default))
+//                .padding(.horizontal, 50)
+//                .shadow(radius: 12)
+//                
+//            })
+//                .accentColor(Color.primary)
+//            
             Button(action: {
                 
             }, label: {
                 Text("Sign Up with Email")
                     .font(.system(size: 23, weight: .medium, design: .default))
             })
+                .padding(.all)
             
             Button(action: {
                 presentationMode.wrappedValue.dismiss()
             }, label: {
                 Text("Continue as guest".uppercased())
-                    .font(.headline)
+                    .font(.callout)
                     .fontWeight(.medium)
                     .padding()
             })
                 .accentColor(.black)
         })
             .fullScreenCover(isPresented: $showOnboardingP2,
-                             content: {
-                OnboardingViewP2()
+                             onDismiss: {
+                                 self.presentationMode.wrappedValue.dismiss()
+                             }, content: {
+                OnboardingViewP2(displayName: $displayName, email: $email, providerID: $providerID, provider: $provider)
             })
+            .alert(isPresented: $showError, content: {
+                return Alert(title: Text("Error signing in"))
+            })
+    }
+    
+    // MARK: Functions
+    
+    func connectToFirebase(name: String, email: String, provider: String, credential: AuthCredential) {
+        
+        AuthService.instance.logInUserToFirebase(credential: credential) { (returnedProviderID, isError) in
+            if let providerID = returnedProviderID, !isError {
+                // Success
+                
+                self.displayName = name
+                self.email = email
+                self.providerID = providerID
+                self.provider = provider
+                self.showOnboardingP2.toggle()
+                
+                
+            } else {
+                // Error
+                print("Error logging in.")
+                self.showError.toggle()
+            }
+        }
+        
     }
 }
 

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var currentUserID: String? = nil
+    @AppStorage(currentUserDefaults.userID) var currentUserID: String?
     
     var body: some View {
         

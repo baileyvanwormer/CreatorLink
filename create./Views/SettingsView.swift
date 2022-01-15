@@ -18,13 +18,13 @@ struct SettingsView: View {
                 GroupBox(label: SettingsLabelView(labelText: "Create.", labelImage: "dot.radiowaves.left.and.right"), content: {
                     HStack(alignment: .center, spacing: 10, content: {
                         
-                        Image("create.banner")
+                        Image("create.banner.transparent")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 80, height: 80, alignment: .center)
                             .cornerRadius(12)
                         
-                        Text("Create is a community for creators to learn, grow, and share.")
+                        Text("CreatorLink is a community for creators to meet, grow, and share.")
                             .font(.footnote)
                     })
                 })
@@ -72,7 +72,7 @@ struct SettingsView: View {
                     Button(action: {
                         openCustomURL(urlString: "https://www.google.com")
                     }, label: {
-                        SettingsRowView(leftIcon: "globe", text: "Create. Website", color: .blue)
+                        SettingsRowView(leftIcon: "globe", text: "CreatorLink Website", color: .blue)
                     })
                     
                 })
@@ -81,7 +81,7 @@ struct SettingsView: View {
                 // MARK: SECTION 4: Sign off
                 GroupBox(content: {
                     
-                    Text("Create. \n Made in Chapel Hill \n All Rights Reserved \n Create. Inc \n Copyright 2022")
+                    Text("CreatorLink \n Made in Chapel Hill \n All Rights Reserved \n CreatorLink Inc \n Copyright 2022")
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.center)
                         .frame(maxWidth: .infinity)

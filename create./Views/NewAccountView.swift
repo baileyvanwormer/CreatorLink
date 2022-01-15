@@ -20,12 +20,16 @@ struct NewAccountView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             
+            Spacer()
+            Spacer()
+            
             Text("You're not signed in!")
                 .font(.title)
                 .fontWeight(.bold)
                 .lineLimit(1)
                 .minimumScaleFactor(0.5)
                 .foregroundColor(.primary)
+            
             
             Text("Click the button below to create an account")
                 .font(.headline)

@@ -42,6 +42,9 @@
 		62B1CED027863C3300766010 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1CECF27863C3300766010 /* CommentModel.swift */; };
 		62B1CED2278651C200766010 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1CED1278651C200766010 /* CarouselView.swift */; };
 		62B1CED42786584F00766010 /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1CED32786584F00766010 /* ImageGridView.swift */; };
+		62B1DCBD2791BF0F0052F95E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1DCBC2791BF0F0052F95E /* AuthService.swift */; };
+		62B1DCC12791CAA00052F95E /* Enums & Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1DCC02791CAA00052F95E /* Enums & Structs.swift */; };
+		62B1DCC52791CC440052F95E /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B1DCC42791CC440052F95E /* ImageManager.swift */; };
 		62BAEECE2762836900B01971 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62BAEECD2762836900B01971 /* GoogleService-Info.plist */; };
 		62DC612F2786A64A002F5267 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DC612E2786A64A002F5267 /* UploadView.swift */; };
 		62DC61312786A873002F5267 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DC61302786A873002F5267 /* ImagePicker.swift */; };
@@ -88,6 +91,9 @@
 		62B1CECF27863C3300766010 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		62B1CED1278651C200766010 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		62B1CED32786584F00766010 /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
+		62B1DCBC2791BF0F0052F95E /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		62B1DCC02791CAA00052F95E /* Enums & Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enums & Structs.swift"; sourceTree = "<group>"; };
+		62B1DCC42791CC440052F95E /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		62BAEECD2762836900B01971 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62DC612E2786A64A002F5267 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
 		62DC61302786A873002F5267 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -173,6 +179,8 @@
 		628E56D427627A0E00B7BDB4 /* create. */ = {
 			isa = PBXGroup;
 			children = (
+				62B1DCC22791CC240052F95E /* Utilities */,
+				62B1DCBF2791CA900052F95E /* Extensions */,
 				62A02680278BE76C009DA487 /* Services */,
 				62A0267F278BE711009DA487 /* create..entitlements */,
 				62B1CEC62786257500766010 /* SubViews */,
@@ -198,6 +206,7 @@
 		62A02680278BE76C009DA487 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				62B1DCBB2791BEF80052F95E /* Firebase */,
 				62A02681278BE774009DA487 /* SignInProviders */,
 			);
 			path = Services;
@@ -226,6 +235,30 @@
 				624F3697278B8A1800CC7622 /* LikeAnimationView.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		62B1DCBB2791BEF80052F95E /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				62B1DCBC2791BF0F0052F95E /* AuthService.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		62B1DCBF2791CA900052F95E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				62B1DCC02791CAA00052F95E /* Enums & Structs.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		62B1DCC22791CC240052F95E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				62B1DCC42791CC440052F95E /* ImageManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		C679EBBFE7D83A81F2682ECC /* Pods */ = {
@@ -372,6 +405,7 @@
 				623C25CD278B3D74004F3312 /* SettingsRowView.swift in Sources */,
 				62B1CECA278632DC00766010 /* PostArrayObject.swift in Sources */,
 				624F3696278B812400CC7622 /* OnboardingViewP2.swift in Sources */,
+				62B1DCC12791CAA00052F95E /* Enums & Structs.swift in Sources */,
 				62B1CEC82786265500766010 /* SinglePostView.swift in Sources */,
 				62B1CECE27863AF800766010 /* MessageView.swift in Sources */,
 				62B1CED42786584F00766010 /* ImageGridView.swift in Sources */,
@@ -380,6 +414,8 @@
 				62981E8C2762806B00BF09E9 /* AccountView - old.swift in Sources */,
 				628E56E827627A5F00B7BDB4 /* PostView.swift in Sources */,
 				628E56EC27627A8600B7BDB4 /* ProfileView.swift in Sources */,
+				62B1DCC52791CC440052F95E /* ImageManager.swift in Sources */,
+				62B1DCBD2791BF0F0052F95E /* AuthService.swift in Sources */,
 				62A9F8CA278A42D2003B3F3A /* PostImageView.swift in Sources */,
 				624F3698278B8A1800CC7622 /* LikeAnimationView.swift in Sources */,
 				628E56D627627A0E00B7BDB4 /* create_App.swift in Sources */,
@@ -523,7 +559,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "create--Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "creator link";
+				INFOPLIST_KEY_CFBundleDisplayName = CreatorLink;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera at the user's request to take a photo.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This allows the app to access the photo library to import or save a photo at the user's request.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -558,7 +594,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "create--Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "creator link";
+				INFOPLIST_KEY_CFBundleDisplayName = CreatorLink;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera at the user's request to take a photo.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This allows the app to access the photo library to import or save a photo at the user's request.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

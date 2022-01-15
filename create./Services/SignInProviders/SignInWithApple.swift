@@ -15,12 +15,13 @@ class SignInWithApple: NSObject, ASAuthorizationControllerDelegate {
     
     static let instance = SignInWithApple()
     
-    
+    var onboardingView: OnboardingView!
 
     // Unhashed nonce.
     fileprivate var currentNonce: String?
 
-    func startSignInWithAppleFlow() {
+    func startSignInWithAppleFlow(view: OnboardingView) {
+        self.onboardingView = view
       let nonce = randomNonceString()
       currentNonce = nonce
       let appleIDProvider = ASAuthorizationAppleIDProvider()
@@ -110,13 +111,14 @@ class SignInWithApple: NSObject, ASAuthorizationControllerDelegate {
                                                     rawNonce: nonce)
             
             
-        print("SIGN_IN TO FIREBASE NOW: with emial \(email) and with name: \(name)")
+            self.onboardingView.connectToFirebase(name: name, email: email, provider: "apple", credential: credential)
         }
       }
 
       func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
         print("Sign in with Apple errored: \(error)")
+          self.onboardingView.showError.toggle()
       }
 
         
